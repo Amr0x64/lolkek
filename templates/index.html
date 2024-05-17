@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wb</title>
+</head>
+<body>
+    <form class="form">
+        <label for="order_id">Идентификатор заказа</label><br>
+        <input type="text" id="orderId"><br>
+        <button type="button" onclick="OrderIdHandler()" style="margin-top: 30px;">Получить</button>
+    </form>
+
+    <div class="result" style="margin-top: 50px;"></div>
+
+    <script>
+        const OrderIdHandler = () => {
+            let orderId = document.getElementById("orderId").value
+            if (orderId != "") {
+                let url = "http://localhost:6002/getOrder?order_uid=" + orderId
+                let result = document.getElementsByClassName("result")[0]
+
+                fetch(url)
+                    .then(response => response.json())
+                    .then(data => {result.textContent = JSON.stringify(data); JSON.stringify(data)})
+            }
+        }
+    </script>
+</body>
+</html>
