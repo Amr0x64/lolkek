@@ -81,10 +81,9 @@ func (s *Service) StartCache(ctx context.Context) error {
 	if err != nil {
 		return err
 	}
-	
+
 	for _, o := range cacheDb {
 		s.Cache.OrderCache[o.OrderUid] = o
-		log.Println(o)
 	}
 
 	return nil
