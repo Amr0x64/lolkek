@@ -1,9 +1,9 @@
-## Запуск
-1)cd D:\VsCodeProjects\wbl_l0\cmd 
-2)go run .
+## Запуск  
+1)cd D:\VsCodeProjects\wbl_l0\cmd  
+2)go run .  
 
-Запустить вторую консоль
-1)cd D:\VsCodeProjects\wbl_l0\publisher 
+Запустить вторую консоль  
+1)cd D:\VsCodeProjects\wbl_l0\publisher    
 2)go run .
 
 ## Интерфейс
